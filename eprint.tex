@@ -207,7 +207,8 @@ $\ell$ such that $p\nmid \ell$, we have $E[\ell] \cong \ZZ/\ell\ZZ \oplus
 Curves in the same isogeny class are either all supersingular or all
 ordinary. 
 We assume for the remainder of this paper that
-we are in the supersingular case. Every supersingular curve being
+we are in the supersingular case. Because we only care about curves
+up to isomorphism, and every supersingular curve is
 isomorphic to a curve defined over the field~$\FF_{p^2}$, we limit
 ourselves to this base field.
 
@@ -1491,11 +1492,13 @@ Finally, it should be noted that both approaches, if implemented as
 described above, leak two bits of security. Indeed, the point
 $(1,\ldots)$ of the image curve is a point of order $4$ in the kernel
 of the dual of the computed isogeny (the secret). It is easy to mask
-this by taking a random change of coordinates, thus in the security
-analysis of Section~\ref{sec:security} we will assume that such
-countermeasure has been applied. However, for practical purposes, we
-found this more costly than simply adding two bits of security and
-letting the information leak.
+this leakage by taking a random change of coordinates. However, for
+practical purposes, we found this masking more costly than simply adding
+two bits of security and letting the information leak, although
+technically the
+leaked information alters the complexity assumptions needed for the
+security proofs. For ease of analysis, we assume in
+Section~\ref{sec:security} that coordinate masking has been applied.
 
 Table~\ref{tab:counts} summarizes the costs of the isogeny evaluation
 and scalar multiplication formulas in light of these remarks. Because
@@ -1814,7 +1817,7 @@ is proved in three steps, known by the names of \emph{completeness},
 
   To prove soundness, we let Charles be any polynomially bounded
   adversary capable of convincing Vic with a non-negligible
-  probability. We use Charles as a black-box of which we can control
+  probability. We use Charles as a black-box for which we can control
   the random coin tosses. By restarting it a polynomial number of
   times with the same random input, and by asking each time a different
   set of questions, we learn with overwhelming probability a diagram
