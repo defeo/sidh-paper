@@ -19,7 +19,7 @@ Juliana~V. Belding, \emph{Number Theoretic Algorithms for Elliptic Curves},
 
 \bibitem{twisted-edwards}
 Daniel Bernstein, Peter Birkner, Marc Joye, Tanja Lange and Christiane Peters,
-  {Twisted Edwards Curves}, in: \emph{Progress in Cryptology -- AFRICACRYPT
+  {Twisted Edwards Curves}, in: \emph{Progress in Cryptology --- AFRICACRYPT
   2008}, pp.~389--405, 2008.
 
 \bibitem{efd}
@@ -111,7 +111,7 @@ Antoine Joux, \emph{The {W}eil and {T}ate pairings as building blocks for
 
 \bibitem{kocher+jaffe+jun99}
 Paul Kocher, Joshua Jaffe and Benjamin Jun, {Differential Power Analysis}, in:
-  \emph{Advances in Cryptology -- CRYPTO' 99}, Lecture Notes in Computer
+  \emph{Advances in Cryptology --- CRYPTO' 99}, Lecture Notes in Computer
   Science 1666, pp.~388--397, Springer Berlin Heidelberg, Berlin, Heidelberg,
   December 1999.
 
